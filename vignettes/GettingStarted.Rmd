@@ -1,0 +1,67 @@
+---
+title: "Getting Started"
+author: "Sean Davis"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Initialize an API Client
+
+```{r}
+library(dplyr)
+library(metagenomicsClientR)
+```
+
+
+```{r}
+basePath = 'https://cmgd-telemetry-whnnxetv4q-uc.a.run.app'
+client = ApiClient$new(basePath = basePath)
+api = DefaultApi$new(apiClient = client)
+```
+
+```{r}
+api
+```
+
+
+
+# Queries
+
+```{r}
+qres = api$ListFileEventsFilesChangesGet()
+qres
+```
+
+Convert to data.frame
+
+```{r}
+hit_list = qres$toJSON()$hits
+df = bind_rows(hit_list)
+```
+
+```{r}
+glimpse(df)
+```
+
+# Models
+
+```{r}
+class(qres)
+```
+
+```{r}
+class(qres$hits[[1]])
+```
+
+```{r}
+StorageEventReturn
+```
+
+```{r}
+StorageEventCollection
+```
+

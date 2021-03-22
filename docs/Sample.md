@@ -1,4 +1,4 @@
-# metagenomicsClientR2::Sample
+# metagenomicsClientR::Sample
 
 ## Properties
 Name | Type | Description | Notes

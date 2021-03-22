@@ -1,4 +1,4 @@
-# metagenomicsClientR2::NFReturn
+# metagenomicsClientR::NFReturn
 
 Represents a nextflow event     
 ## Properties

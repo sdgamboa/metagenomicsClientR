@@ -29,7 +29,7 @@ Events from running Nextflow pipelines when using -with-weblog.  See [the Nextfl
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.nf.model <- NFModel$new("run_name_example", "run_id_example", "event_example", "utc_time_example", 123, 123) # NFModel | 
 
@@ -71,7 +71,7 @@ Create Sample
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.sample <- Sample$new("name_example", "hash_example") # Sample | 
 
@@ -113,7 +113,7 @@ Create Study
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.study <- Study$new("name_example", 123) # Study | 
 
@@ -155,7 +155,7 @@ Delete Study
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.uuid <- 'uuid_example' # character | 
 
@@ -199,7 +199,7 @@ Track all changes in cloud storage
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.body <- NULL # object | 
 
@@ -243,7 +243,7 @@ Generates a v4 signed URL for downloading a blob.  Note that this method require
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.name <- 'name_example' # character | 
 
@@ -285,7 +285,7 @@ Get Nextflow Event
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.id <- 'id_example' # character | 
 
@@ -327,7 +327,7 @@ Get Samples
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 
 #Get Samples
@@ -364,7 +364,7 @@ Get Studies
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 
 #Get Studies
@@ -401,7 +401,7 @@ Get Uuid From String
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.string <- 'string_example' # character | 
 
@@ -443,7 +443,7 @@ List File Events
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.limit <- 100 # integer | 
 var.offset <- 0 # integer | 
@@ -493,7 +493,7 @@ List Nextflow Events
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.limit <- 100 # integer | 
 var.offset <- 0 # integer | 
@@ -537,7 +537,7 @@ Samples For Study
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 var.uuid <- 'uuid_example' # character | 
 
@@ -579,7 +579,7 @@ Samples Json
 
 ### Example
 ```R
-library(metagenomicsClientR2)
+library(metagenomicsClientR)
 
 
 #Samples Json

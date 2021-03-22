@@ -44,7 +44,7 @@ StorageEventCollection <- R6::R6Class(
     fromJSON = function(StorageEventCollectionJson) {
       StorageEventCollectionObject <- jsonlite::fromJSON(StorageEventCollectionJson)
       if (!is.null(StorageEventCollectionObject$`hits`)) {
-        self$`hits` <- ApiClient$new()$deserializeObj(StorageEventCollectionObject$`hits`, "array[StorageEventReturn]", loadNamespace("metagenomicsClientR2"))
+        self$`hits` <- ApiClient$new()$deserializeObj(StorageEventCollectionObject$`hits`, "array[StorageEventReturn]", loadNamespace("metagenomicsClientR"))
       }
       self
     },
@@ -63,7 +63,7 @@ StorageEventCollection <- R6::R6Class(
     },
     fromJSONString = function(StorageEventCollectionJson) {
       StorageEventCollectionObject <- jsonlite::fromJSON(StorageEventCollectionJson)
-      self$`hits` <- ApiClient$new()$deserializeObj(StorageEventCollectionObject$`hits`, "array[StorageEventReturn]", loadNamespace("metagenomicsClientR2"))
+      self$`hits` <- ApiClient$new()$deserializeObj(StorageEventCollectionObject$`hits`, "array[StorageEventReturn]", loadNamespace("metagenomicsClientR"))
       self
     }
   )

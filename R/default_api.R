@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Default operations
-#' @description metagenomicsClientR2.Default
+#' @description metagenomicsClientR.Default
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -338,7 +338,7 @@
 #' \dontrun{
 #' ####################  AddNextflowEventNextflowEventsPost  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.nf.model <- NFModel$new() # NFModel | 
 #'
 #' #Add Nextflow Event
@@ -349,7 +349,7 @@
 #'
 #' ####################  CreateSampleMetadataSamplesPost  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.sample <- Sample$new() # Sample | 
 #'
 #' #Create Sample
@@ -360,7 +360,7 @@
 #'
 #' ####################  CreateStudyMetadataStudiesPost  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.study <- Study$new() # Study | 
 #'
 #' #Create Study
@@ -371,7 +371,7 @@
 #'
 #' ####################  DeleteStudyMetadataStudiesUuidDelete  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.uuid <- 'uuid_example' # character | 
 #'
 #' #Delete Study
@@ -382,7 +382,7 @@
 #'
 #' ####################  FilesChangeFilesChangesPost  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.body <- NULL # object | 
 #'
 #' #Files Change
@@ -393,7 +393,7 @@
 #'
 #' ####################  GenerateDownloadSignedUrlV4FilesSignedGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.name <- 'name_example' # character | 
 #'
 #' #Generate Download Signed Url V4
@@ -404,7 +404,7 @@
 #'
 #' ####################  GetNextflowEventNextflowEventsIdGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.id <- 'id_example' # character | 
 #'
 #' #Get Nextflow Event
@@ -415,7 +415,7 @@
 #'
 #' ####################  GetSamplesMetadataSamplesGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #'
 #' #Get Samples
 #' api.instance <- DefaultApi$new()
@@ -425,7 +425,7 @@
 #'
 #' ####################  GetStudiesMetadataStudiesGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #'
 #' #Get Studies
 #' api.instance <- DefaultApi$new()
@@ -435,7 +435,7 @@
 #'
 #' ####################  GetUuidFromStringMetadataUuidGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.string <- 'string_example' # character | 
 #'
 #' #Get Uuid From String
@@ -446,7 +446,7 @@
 #'
 #' ####################  ListFileEventsFilesChangesGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.limit <- 100 # integer | 
 #' var.offset <- 0 # integer | 
 #' var.start.date <- 'start.date_example' # character | 
@@ -461,7 +461,7 @@
 #'
 #' ####################  ListNextflowEventsNextflowEventsGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.limit <- 100 # integer | 
 #' var.offset <- 0 # integer | 
 #'
@@ -473,7 +473,7 @@
 #'
 #' ####################  SamplesForStudyMetadataStudiesUuidSamplesGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #' var.uuid <- 'uuid_example' # character | 
 #'
 #' #Samples For Study
@@ -484,7 +484,7 @@
 #'
 #' ####################  SamplesJsonMetadataSamplesjsonGet  ####################
 #'
-#' library(metagenomicsClientR2)
+#' library(metagenomicsClientR)
 #'
 #' #Samples Json
 #' api.instance <- DefaultApi$new()
@@ -548,7 +548,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -602,7 +602,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -656,7 +656,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -709,7 +709,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -763,7 +763,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -814,7 +814,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -867,7 +867,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -912,7 +912,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -957,7 +957,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1008,7 +1008,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1063,7 +1063,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "StorageEventCollection", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "StorageEventCollection", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1112,7 +1112,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "NFCollection", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "NFCollection", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1165,7 +1165,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1210,7 +1210,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR2")),
+          self$apiClient$deserialize(resp, "AnyType", loadNamespace("metagenomicsClientR")),
           error = function(e){
              stop("Failed to deserialize response")
           }

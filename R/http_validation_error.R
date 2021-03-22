@@ -44,7 +44,7 @@ HTTPValidationError <- R6::R6Class(
     fromJSON = function(HTTPValidationErrorJson) {
       HTTPValidationErrorObject <- jsonlite::fromJSON(HTTPValidationErrorJson)
       if (!is.null(HTTPValidationErrorObject$`detail`)) {
-        self$`detail` <- ApiClient$new()$deserializeObj(HTTPValidationErrorObject$`detail`, "array[ValidationError]", loadNamespace("metagenomicsClientR2"))
+        self$`detail` <- ApiClient$new()$deserializeObj(HTTPValidationErrorObject$`detail`, "array[ValidationError]", loadNamespace("metagenomicsClientR"))
       }
       self
     },
@@ -63,7 +63,7 @@ HTTPValidationError <- R6::R6Class(
     },
     fromJSONString = function(HTTPValidationErrorJson) {
       HTTPValidationErrorObject <- jsonlite::fromJSON(HTTPValidationErrorJson)
-      self$`detail` <- ApiClient$new()$deserializeObj(HTTPValidationErrorObject$`detail`, "array[ValidationError]", loadNamespace("metagenomicsClientR2"))
+      self$`detail` <- ApiClient$new()$deserializeObj(HTTPValidationErrorObject$`detail`, "array[ValidationError]", loadNamespace("metagenomicsClientR"))
       self
     }
   )

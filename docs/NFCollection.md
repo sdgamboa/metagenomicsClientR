@@ -1,4 +1,4 @@
-# metagenomicsClientR2::NFCollection
+# metagenomicsClientR::NFCollection
 
 Represents a nextflow event     
 ## Properties

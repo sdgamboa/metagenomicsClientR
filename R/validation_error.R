@@ -66,7 +66,7 @@ ValidationError <- R6::R6Class(
     fromJSON = function(ValidationErrorJson) {
       ValidationErrorObject <- jsonlite::fromJSON(ValidationErrorJson)
       if (!is.null(ValidationErrorObject$`loc`)) {
-        self$`loc` <- ApiClient$new()$deserializeObj(ValidationErrorObject$`loc`, "array[character]", loadNamespace("metagenomicsClientR2"))
+        self$`loc` <- ApiClient$new()$deserializeObj(ValidationErrorObject$`loc`, "array[character]", loadNamespace("metagenomicsClientR"))
       }
       if (!is.null(ValidationErrorObject$`msg`)) {
         self$`msg` <- ValidationErrorObject$`msg`
@@ -105,7 +105,7 @@ ValidationError <- R6::R6Class(
     },
     fromJSONString = function(ValidationErrorJson) {
       ValidationErrorObject <- jsonlite::fromJSON(ValidationErrorJson)
-      self$`loc` <- ApiClient$new()$deserializeObj(ValidationErrorObject$`loc`, "array[character]", loadNamespace("metagenomicsClientR2"))
+      self$`loc` <- ApiClient$new()$deserializeObj(ValidationErrorObject$`loc`, "array[character]", loadNamespace("metagenomicsClientR"))
       self$`msg` <- ValidationErrorObject$`msg`
       self$`type` <- ValidationErrorObject$`type`
       self

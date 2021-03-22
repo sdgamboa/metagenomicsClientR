@@ -44,7 +44,7 @@ NFCollection <- R6::R6Class(
     fromJSON = function(NFCollectionJson) {
       NFCollectionObject <- jsonlite::fromJSON(NFCollectionJson)
       if (!is.null(NFCollectionObject$`hits`)) {
-        self$`hits` <- ApiClient$new()$deserializeObj(NFCollectionObject$`hits`, "array[NFReturn]", loadNamespace("metagenomicsClientR2"))
+        self$`hits` <- ApiClient$new()$deserializeObj(NFCollectionObject$`hits`, "array[NFReturn]", loadNamespace("metagenomicsClientR"))
       }
       self
     },
@@ -63,7 +63,7 @@ NFCollection <- R6::R6Class(
     },
     fromJSONString = function(NFCollectionJson) {
       NFCollectionObject <- jsonlite::fromJSON(NFCollectionJson)
-      self$`hits` <- ApiClient$new()$deserializeObj(NFCollectionObject$`hits`, "array[NFReturn]", loadNamespace("metagenomicsClientR2"))
+      self$`hits` <- ApiClient$new()$deserializeObj(NFCollectionObject$`hits`, "array[NFReturn]", loadNamespace("metagenomicsClientR"))
       self
     }
   )

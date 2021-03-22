@@ -1,4 +1,4 @@
-# metagenomicsClientR2::NFModel
+# metagenomicsClientR::NFModel
 
 ## Properties
 Name | Type | Description | Notes

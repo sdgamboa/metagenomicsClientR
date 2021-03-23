@@ -7,7 +7,7 @@ api.instance <- DefaultApi$new()
 
 test_that("AddNextflowEventNextflowEventsPost", {
   # tests for AddNextflowEventNextflowEventsPost
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Add Nextflow Event
   # Events from running Nextflow pipelines when using -with-weblog.  See [the Nextflow documentation](https://www.nextflow.io/docs/latest/tracing.html#weblog-via-http).
   # @param nf.model NFModel 
@@ -19,7 +19,7 @@ test_that("AddNextflowEventNextflowEventsPost", {
 
 test_that("CreateSampleMetadataSamplesPost", {
   # tests for CreateSampleMetadataSamplesPost
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Create Sample
   # @param sample Sample 
   # @return [AnyType]
@@ -30,7 +30,7 @@ test_that("CreateSampleMetadataSamplesPost", {
 
 test_that("CreateStudyMetadataStudiesPost", {
   # tests for CreateStudyMetadataStudiesPost
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Create Study
   # @param study Study 
   # @return [AnyType]
@@ -41,7 +41,7 @@ test_that("CreateStudyMetadataStudiesPost", {
 
 test_that("DeleteStudyMetadataStudiesUuidDelete", {
   # tests for DeleteStudyMetadataStudiesUuidDelete
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Delete Study
   # @param uuid character 
   # @return [AnyType]
@@ -52,7 +52,7 @@ test_that("DeleteStudyMetadataStudiesUuidDelete", {
 
 test_that("FilesChangeFilesChangesPost", {
   # tests for FilesChangeFilesChangesPost
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Files Change
   # Track all changes in cloud storage
   # @param body object 
@@ -64,7 +64,7 @@ test_that("FilesChangeFilesChangesPost", {
 
 test_that("GenerateDownloadSignedUrlV4FilesSignedGet", {
   # tests for GenerateDownloadSignedUrlV4FilesSignedGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Generate Download Signed Url V4
   # Generates a v4 signed URL for downloading a blob.  Note that this method requires a service account key file. You can not use this if you are using Application Default Credentials from Google Compute Engine or from the Google Cloud SDK.
   # @param name character 
@@ -76,7 +76,7 @@ test_that("GenerateDownloadSignedUrlV4FilesSignedGet", {
 
 test_that("GetNextflowEventNextflowEventsIdGet", {
   # tests for GetNextflowEventNextflowEventsIdGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Get Nextflow Event
   # @param id character 
   # @return [AnyType]
@@ -87,7 +87,7 @@ test_that("GetNextflowEventNextflowEventsIdGet", {
 
 test_that("GetSamplesMetadataSamplesGet", {
   # tests for GetSamplesMetadataSamplesGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Get Samples
   # @return [AnyType]
 
@@ -97,7 +97,7 @@ test_that("GetSamplesMetadataSamplesGet", {
 
 test_that("GetStudiesMetadataStudiesGet", {
   # tests for GetStudiesMetadataStudiesGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Get Studies
   # @return [AnyType]
 
@@ -107,7 +107,7 @@ test_that("GetStudiesMetadataStudiesGet", {
 
 test_that("GetUuidFromStringMetadataUuidGet", {
   # tests for GetUuidFromStringMetadataUuidGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Get Uuid From String
   # @param string character 
   # @return [AnyType]
@@ -118,7 +118,7 @@ test_that("GetUuidFromStringMetadataUuidGet", {
 
 test_that("ListFileEventsFilesChangesGet", {
   # tests for ListFileEventsFilesChangesGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # List File Events
   # @param limit integer  (optional)
   # @param offset integer  (optional)
@@ -133,7 +133,7 @@ test_that("ListFileEventsFilesChangesGet", {
 
 test_that("ListNextflowEventsNextflowEventsGet", {
   # tests for ListNextflowEventsNextflowEventsGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # List Nextflow Events
   # @param limit integer  (optional)
   # @param offset integer  (optional)
@@ -145,7 +145,7 @@ test_that("ListNextflowEventsNextflowEventsGet", {
 
 test_that("SamplesForStudyMetadataStudiesUuidSamplesGet", {
   # tests for SamplesForStudyMetadataStudiesUuidSamplesGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Samples For Study
   # @param uuid character 
   # @return [AnyType]
@@ -156,7 +156,7 @@ test_that("SamplesForStudyMetadataStudiesUuidSamplesGet", {
 
 test_that("SamplesJsonMetadataSamplesjsonGet", {
   # tests for SamplesJsonMetadataSamplesjsonGet
-  # base path: http://localhost
+  # base path: https://cmgd-telemetry-whnnxetv4q-uc.a.run.app
   # Samples Json
   # @return [AnyType]
 

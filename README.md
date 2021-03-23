@@ -52,7 +52,7 @@ library(metagenomicsClientR)
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://cmgd-telemetry-whnnxetv4q-uc.a.run.app*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -10,5 +10,5 @@ Encoding: UTF-8
 License: Unlicense
 LazyData: true
 Suggests: testthat
-Imports: jsonlite, httr, R6, base64enc
-RoxygenNote: 6.0.1.9000
+Imports: jsonlite, httr, R6, base64enc, dplyr
+RoxygenNote: 7.1.1

@@ -66,6 +66,6 @@ get_nf_events <- function(
             sample = gsub(".*sample: (.*).*\naccessions:.*$", "\\1" , script)
             
         ) %>% 
-        dplyr::select(run_name, run_id, event, utc_time, event_id, sample, accessions, rowhash) 
+        dplyr::select(run_name, run_id, event, utc_time, event_id, metadata, sample, accessions, rowhash) 
     return(y)
 }

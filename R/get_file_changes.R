@@ -10,13 +10,15 @@
 #'
 #' @return tibble
 #' @importFrom dplyr bind_rows
+#' @importFrom magrittr %>%
 #' @export
 #'
 #' @examples
 #' # Get the first 10 file changes
 #' x <- get_file_changes(limit = 10)
 #' x
-#' glimpse(x)
+#'
+
 get_file_changes <- function(
     limit = 100,
     offset = 0,

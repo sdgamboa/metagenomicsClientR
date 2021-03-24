@@ -33,5 +33,5 @@ TODO
 # Get the first 10 file changes
 x <- get_file_changes(limit = 10)
 x
-glimpse(x)
+
 }

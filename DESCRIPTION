@@ -11,5 +11,5 @@ License: MIT + file LICENSE
 LazyData: true
 Suggests: testthat
 Imports: jsonlite,httr, R6, base64enc, dplyr, purrr, tibble, tidyr, magrittr,
-    utils, BiocFileCache, rappdirs
+    utils, BiocFileCache, rappdirs, readr
 RoxygenNote: 7.1.1

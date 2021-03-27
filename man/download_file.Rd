@@ -4,14 +4,12 @@
 \alias{download_file}
 \title{Add files to metagenomicsClientR}
 \usage{
-download_file(rname, url, verbose = FALSE)
+download_file(rname, url)
 }
 \arguments{
 \item{rname}{A character vector indicating the resource name (file).}
 
 \item{url}{A character vector indicating the url of the resource}
-
-\item{verbose}{logical}
 }
 \value{
 Character vector of legnth 1, indicating resource name and path

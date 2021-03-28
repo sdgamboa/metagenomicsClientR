@@ -7,9 +7,9 @@
 get_nf_events(limit = 100, offset = 0)
 }
 \arguments{
-\item{limit}{integer}
+\item{limit}{A numeric vector of length 1 indicating the number of rows that must be returned.}
 
-\item{offset}{integer}
+\item{offset}{TODO}
 }
 \value{
 tibble

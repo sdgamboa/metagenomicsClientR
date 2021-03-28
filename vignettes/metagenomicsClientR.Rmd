@@ -1,0 +1,88 @@
+---
+title: "metagenomicsClientR: Client for Curated Metagenomics Web Portal and API"
+abstract: >
+    The `metagenomicsClientR` package provides a client to access and download
+    data from the [Curated Metagenomics Web Portal API](https://cmgd-telemetry-whnnxetv4q-uc.a.run.app/docs#/).
+    The package also provides functions that are useful for formatting and manipulating the data
+    accessed through the portal.
+output: BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{metagenomicsClientR: Client for Curated Metagenomics Web Portal and API}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# Introduction
+
+Packages:
+
+```{r setup, message=FALSE, warning=FALSE}
+library(metagenomicsClientR)
+library(BiocFileCache)
+library(dplyr)
+library(magrittr)
+```
+
+# Download a file
+
+## Create a cache
+
+`metagenomicsClientR` provides a function that allows you to create or load a BiocFileCache class object. The path to the cache is determined by `rappdirs::user_cache_dir(appname="metagenomicsClientR")`. Once created, the cache can be manipulated with the functions from the [BiocFileCache package](https://bioconductor.org/packages/release/bioc/html/BiocFileCache.html).
+
+
+```{r}
+cache <- metagenomics_cache()
+cache
+```
+
+## Get data information through the API
+
+In this example, we'll use the `get_file_changes` function to access the *files/changes* endpoint of the API and get a list of the files matching "AsnicarF". The output is a tibble containing, among other data, the URLs to download the files.
+
+
+```{r}
+x <- get_file_changes(filename_regex = "AsnicarF")
+x <- select(x, name, timeCreated, eventTime, event_id, download_url)
+x
+x$name
+x$download_url
+```
+
+## Get the URL for a specific file
+
+We can select a specific file from the list and use subsetting to get its download URL. In this example, we'll download the "AsnicarF_2017.tar.gz" file:
+
+
+```{r }
+raw_url <- x[x$name == "AsnicarF_2017.tar.gz",]$download_url
+url <- gsub("\\?.*$", "", raw_url) # Remove parameters from url
+```
+
+**Note:** Parameters must be removed from the URL.
+
+
+## Download the file to the cache
+
+The file can be downloaded directly to the cache with the `add_file` function. The function will behave differently under four different scenarios:
+
+
++ If **a cache has not been created** at the path returned by `rappdirs::user_cache_dir(appname="metagenomicsClientR")`, the `add_file` function will return an error message indicating that the cache must be created
+first with the `metagenomics_cache` function.
++ If **a cache already exists and the file is not present in it**, `add_file` will download the file to the cache and return a named character vector of length 1 containing the path to the file and the resource id (rid).
++ If **the file already exists in the cache and is up to date**, the `add_file` function will print a message letting you know about it and return a named character vector of length 1 containing the path to the file and the resource id (rid).
++ If **the file is already present in the cache, but needs to be updated**, the `add_file` function won't download the file. Instead, it will print a message letting you know that the file is already present in the cache, but needs to be updated, and it will return a named character vector of length 1 containing the path to the file and the resource id (rid). If you wish to update the file, you can do it with the functions provided by the [BiocFileCache package](https://bioconductor.org/packages/release/bioc/html/BiocFileCache.html), such as `bfcneedsupdate` and `bfcdownload`.
+
+
+```{r}
+AsnicarF_2017 <- add_file(rname = "AsnicarF_2017.tar.gz", url)
+AsnicarF_2017
+```
+

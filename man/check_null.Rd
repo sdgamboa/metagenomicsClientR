@@ -7,7 +7,7 @@
 check_null(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{an object to be tested}
 }
 \value{
 logical

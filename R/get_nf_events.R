@@ -6,7 +6,7 @@ utils::globalVariables(c("run_name", "run_id", "event", "utc_time",
 #' Helper function for get_nf_events()
 #'
 #'
-#' @param x 
+#' @param x an object to be tested
 #'
 #' @return logical
 #' @export
@@ -21,11 +21,10 @@ check_null <- function(x) {
     }
 }
 
-
 #' Get nextflow events
 #'
-#' @param limit integer
-#' @param offset integer
+#' 
+#' @inheritParams get_file_changes
 #'
 #' @return tibble
 #' @importFrom dplyr mutate

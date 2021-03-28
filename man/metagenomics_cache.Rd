@@ -7,8 +7,26 @@
 metagenomics_cache()
 }
 \value{
-A BiocFileCache class object
+A BiocFileCache class object.
 }
 \description{
-Cache for metagenomicsClientR
+\code{metagenomics_cache} creates a BiocFileCache class object or loads an existing one.
+}
+\details{
+The location of the cache created by the \code{metagenomics_cache} function is determined by \code{rappdirs::user_cache_dir(appname="metagenomicsClientR")}. Once created, the cache can be manipulated with functions from the BiocFileCache package.
+}
+\examples{
+\dontrun{
+# Create a BiocFileCache class object
+cache <- metagenomics_cache()
+class(cache)
+
+# Use BiocFileCache functions to manipulate the cache
+BiocFileCache::bfcinfo(cache)
+BiocFileCache::bfcneedsupdate(cache)
+}
+}
+\seealso{
+\code{\link{add_file}}; 
+\code{\link[BiocFileCache]{BiocFileCache}}
 }
